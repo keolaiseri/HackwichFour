@@ -15,6 +15,8 @@ class secondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.secondLabel.text = "My Classes"
 
         // Do any additional setup after loading the view.
     }

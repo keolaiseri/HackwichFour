@@ -35,6 +35,42 @@
             </objects>
             <point key="canvasLocation" x="1369.5652173913045" y="-62.276785714285708"/>
         </scene>
+        <!--Third View Controller-->
+        <scene sceneID="1fx-hu-dOh">
+            <objects>
+                <viewController id="b6f-a9-81v" customClass="thirdViewController" customModule="HackwichFour" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FvL-VQ-Iou">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ags-2P-0Ah">
+                                <rect key="frame" x="20" y="348" width="364" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TI5-Lv-afK">
+                                <rect key="frame" x="173" y="512" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonChangeBackColor:" destination="b6f-a9-81v" eventType="touchUpInside" id="BJy-Q6-VbB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yVo-1o-A8Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ej1-P9-VQg"/>
+                    <connections>
+                        <outlet property="thirdLabel" destination="Ags-2P-0Ah" id="olp-tE-Jlm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6W-3m-jkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.753623188406" y="616.74107142857144"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="JCy-fO-rxK">
             <objects>
@@ -75,6 +111,7 @@
                     <connections>
                         <segue destination="P0X-g4-nHr" kind="relationship" relationship="viewControllers" id="aDr-XH-LN1"/>
                         <segue destination="Ysz-HU-4eb" kind="relationship" relationship="viewControllers" id="WHY-Gz-FWH"/>
+                        <segue destination="C7Z-fM-CQb" kind="relationship" relationship="viewControllers" id="EJe-je-Zvp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d86-76-QY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,8 +156,28 @@
             </objects>
             <point key="canvasLocation" x="460.86956521739131" y="-70.3125"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="kO3-NX-iyM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C7Z-fM-CQb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="heart.fill" catalog="system" id="u2K-Ky-4Pp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dvk-dW-Ypd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b6f-a9-81v" kind="relationship" relationship="rootViewController" id="Pd8-XS-ceq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvJ-Ki-yFj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461" y="617"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
